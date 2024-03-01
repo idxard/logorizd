@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap">
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111; /* Warna latar belakang gelap */
+    }
+
+    .logo {
+      font-family: 'Saira Stencil One', sans-serif;
+      font-size: 3em;
+      color: #F18718; /* Warna logo */
+      animation: blink 1s infinite;
+    }
+
+    .link-container {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .external-link {
+      text-decoration: none;
+      font-size: 1.5em;
+      color: #3498db; /* Warna tautan */
+      transition: color 0.3s ease-in-out;
+    }
+
+    .external-link:hover {
+      color: #1e87f0; /* Warna tautan saat hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="logo" id="logo">Rizd</div>
+  <div class="link-container" id="linkContainer">
+    <a class="external-link" href="https://linktw.in/uNFjWa" id="externalLink" target="_blank"></a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        document.getElementById("logo").style.display = "none";
+        document.getElementById("linkContainer").style.display = "block";
+        window.location.href = "https://linktw.in/uNFjWa";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
